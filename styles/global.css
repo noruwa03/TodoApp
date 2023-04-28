@@ -1,0 +1,325 @@
+* {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  box-sizing: border-box;
+}
+
+:root {
+  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+  line-height: 1.5;
+  font-weight: 400;
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-text-size-adjust: 100%;
+}
+
+.icon {
+  width: 2rem;
+  height: 2rem;
+}
+.icon .stroke-sun {
+  stroke: #FCE570;
+}
+.icon .fill-moon {
+  fill: #fff;
+}
+
+body {
+  background-color: #e8f3f8;
+}
+
+.dark body {
+  background-color: #0d1117;
+}
+.dark header {
+  background-color: transparent;
+}
+.dark header .wrapper .date {
+  color: #fff;
+}
+.dark section .todo-wrapper .stats div span {
+  background-color: rgb(7, 60, 107);
+}
+.dark section .todo-wrapper ul li {
+  background-color: #1f2430;
+}
+.dark section .todo-wrapper ul li.complete {
+  color: #1c1820;
+  background-color: #1c2731;
+}
+.dark section .todo-wrapper ul li.complete span {
+  color: #1c1820;
+}
+.dark section .todo-wrapper ul li div input[type=checkbox] {
+  border: 0.14rem solid #0d1117;
+}
+.dark section .todo-wrapper ul li div input[type=checkbox]:checked {
+  border: rgb(186, 224, 250);
+  background-color: #1c1820;
+}
+.dark section .todo-wrapper ul li div span {
+  color: #c0c0c0;
+}
+.dark section .todo-wrapper ul li div span:hover {
+  background-color: #181818;
+}
+.dark section .todo-wrapper ul li div span:focus[contenteditable] {
+  background-color: #181818;
+}
+
+header {
+  padding: 3rem 0;
+  background-color: #061b25;
+}
+header .wrapper {
+  width: 42%;
+  margin: 0 auto;
+}
+header .wrapper .theme {
+  display: grid;
+  place-content: end;
+  margin-bottom: 1.3rem;
+}
+header .wrapper .date {
+  margin-bottom: 1rem;
+  font-size: 1.1em;
+  font-weight: bold;
+  color: #fff;
+}
+header .wrapper form {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+header .wrapper form input {
+  width: 78%;
+  padding: 0.7rem 1rem;
+  outline: none;
+  border: none;
+  border-radius: 0.5rem 0 0 0.5rem;
+  font-size: 1em;
+  background-color: #082937;
+  color: #fff;
+}
+header .wrapper form input::-moz-placeholder {
+  color: #a4d0e3;
+}
+header .wrapper form input::placeholder {
+  color: #a4d0e3;
+}
+header .wrapper form button {
+  padding: 0.7rem 1rem;
+  width: 21%;
+  border: none;
+  font-size: 0.93em;
+  font-weight: bold;
+  border-radius: 0 0.5rem 0.5rem 0;
+  background-color: #ff8c42;
+  color: #fff;
+  cursor: pointer;
+  text-transform: uppercase;
+}
+header .wrapper form button:hover {
+  background-color: #cc7035;
+}
+
+section {
+  padding: 2rem 0;
+}
+section .todo-wrapper {
+  width: 42%;
+  margin: 0 auto;
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+}
+section .todo-wrapper .stats {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  flex-direction: column;
+  width: 21%;
+}
+section .todo-wrapper .stats div {
+  margin: 0.4rem 0;
+  padding: 0 0 0 0.5rem;
+  border-radius: 0.2rem;
+  background-color: #061b25;
+  color: #a4d0e3;
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  width: 100%;
+  font-weight: 600;
+  font-size: 0.89em;
+  padding: 0.2rem 0 0.2rem 0.6rem;
+  position: relative;
+}
+section .todo-wrapper .stats div span {
+  display: grid;
+  place-content: center;
+  background-color: #1c89bb;
+  color: #fff;
+  width: 25%;
+  height: 100%;
+  font-size: 0.85em;
+  font-weight: 600;
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+section .todo-wrapper ul {
+  width: 75%;
+}
+section .todo-wrapper ul li {
+  background-color: #fff;
+  border-radius: 0.4rem;
+  padding: 1.5rem 1rem;
+  margin: 0 0 0.8rem 0;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+section .todo-wrapper ul li.complete {
+  text-decoration: line-through;
+  color: #77bbd4;
+  background-color: #d2e7f1;
+}
+section .todo-wrapper ul li div {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+}
+section .todo-wrapper ul li div input[type=checkbox] {
+  margin: 0;
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
+  background-color: transparent;
+  width: 1.3rem;
+  height: 1.3rem;
+  border: 0.14rem solid #000;
+  border-radius: 100%;
+  display: grid;
+  place-content: center;
+}
+section .todo-wrapper ul li div input[type=checkbox]::before {
+  content: url("../assets/icons/check.svg");
+  transform: scale(0);
+  transition: all 0.3s ease;
+}
+section .todo-wrapper ul li div input[type=checkbox]:checked {
+  border: #77bbd4;
+  background-color: #77bbd4;
+  transition: all 0.3s ease;
+}
+section .todo-wrapper ul li div input[type=checkbox]:checked::before {
+  transform: scale(1);
+  transition: all 0.3s ease;
+}
+section .todo-wrapper ul li div span {
+  margin: 0 0 0 0.4rem;
+  font-size: 0.9em;
+  padding: 0.2rem 0.4rem;
+  border-radius: 0.5rem;
+  transition: all 0.3s ease;
+  font-weight: 600;
+}
+section .todo-wrapper ul li div span:hover {
+  background-color: aliceblue;
+  transition: all 0.3s ease;
+}
+section .todo-wrapper ul li div span:focus {
+  outline: none;
+}
+section .todo-wrapper ul li div span:focus[contenteditable] {
+  background-color: aliceblue;
+}
+section .todo-wrapper ul li button {
+  border: none;
+  transition: all 0.3s ease;
+  background-color: transparent;
+}
+section .todo-wrapper ul li button svg path {
+  transform: scale(0.9);
+  transition: all 0.3s ease;
+}
+section .todo-wrapper ul li button:hover svg path {
+  fill: #ff0000;
+  transition: all 0.3s ease;
+}
+
+@media screen and (max-width: 760px) {
+  header {
+    padding: 2rem 0;
+  }
+  header .wrapper {
+    width: 90%;
+    margin: 0 auto;
+  }
+  header .wrapper .theme {
+    margin-bottom: 1rem;
+  }
+  header .wrapper .date {
+    margin-bottom: 1rem;
+    font-size: 1.1em;
+    font-weight: bold;
+  }
+  header .wrapper form {
+    flex-direction: column;
+  }
+  header .wrapper form input {
+    width: 100%;
+    border-radius: 0.5rem;
+    font-size: 0.89em;
+  }
+  header .wrapper form button {
+    margin-top: 0.8rem;
+    width: 100%;
+    font-size: 0.85em;
+    border-radius: 0.5rem;
+  }
+  section {
+    padding: 1.5rem 0;
+  }
+  section .todo-wrapper {
+    width: 90%;
+    margin: 0 auto;
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    flex-direction: column;
+  }
+  section .todo-wrapper .stats {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    flex-direction: column;
+    width: 60%;
+    margin: 0 auto 1.3rem auto;
+  }
+  section .todo-wrapper .stats div {
+    width: 100%;
+    padding: 0.2rem 0 0.2rem 0.7rem;
+    position: relative;
+  }
+  section .todo-wrapper .stats div span {
+    display: grid;
+    place-content: center;
+    background-color: rgb(4, 47, 85);
+    color: #fff;
+    width: 27%;
+    height: 100%;
+    font-size: 0.85em;
+    font-weight: 600;
+    position: absolute;
+    top: 0;
+    right: 0;
+  }
+  section .todo-wrapper ul {
+    width: 100%;
+  }
+}/*# sourceMappingURL=global.css.map */
