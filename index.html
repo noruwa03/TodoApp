@@ -13,8 +13,12 @@
         <div class="wrapper">
           <div class="theme"></div>
           <div class="date"></div>
-          <form>
-            <input type="text" placeholder="e.g. Takeout the trash" />
+          <form id="todoForm">
+            <input
+              type="text"
+              placeholder="e.g. Takeout the trash"
+              id="todoInput"
+            />
             <button>Add Task</button>
           </form>
         </div>
@@ -23,50 +27,16 @@
       <section>
         <div class="todo-wrapper">
           <div class="stats">
-            <div class="completed">Completed <span>30</span></div>
-            <div class="remaining">Remaining <span>3</span></div>
-            <div class="total">Total <span>65</span></div>
+            <div>Completed <span class="completed">0</span></div>
+            <div>Remaining <span class="remaining">0</span></div>
+            <div>Total <span class="total">0</span></div>
           </div>
-          <ul id="todo">
-            <li class="complete">
-              <div><input type="checkbox" /> <span>Task One</span></div>
-              <button>
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  width="16"
-                  height="16"
-                  fill="currentColor"
-                  class="bi bi-x-lg"
-                  viewBox="0 0 16 16"
-                >
-                  <path
-                    d="M2.146 2.854a.5.5 0 1 1 .708-.708L8 7.293l5.146-5.147a.5.5 0 0 1 .708.708L8.707 8l5.147 5.146a.5.5 0 0 1-.708.708L8 8.707l-5.146 5.147a.5.5 0 0 1-.708-.708L7.293 8 2.146 2.854Z"
-                  />
-                </svg>
-              </button>
-            </li>
-            <li>
-              <div>
-                <input type="checkbox" /> <span contenteditable>Task Two</span>
-              </div>
-              <button>
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  width="16"
-                  height="16"
-                  fill="currentColor"
-                  class="bi bi-x-lg"
-                  viewBox="0 0 16 16"
-                >
-                  <path
-                    d="M2.146 2.854a.5.5 0 1 1 .708-.708L8 7.293l5.146-5.147a.5.5 0 0 1 .708.708L8.707 8l5.147 5.146a.5.5 0 0 1-.708.708L8 8.707l-5.146 5.147a.5.5 0 0 1-.708-.708L7.293 8 2.146 2.854Z"
-                  />
-                </svg>
-              </button>
-            </li>
-          </ul>
+          <ul id="todo"></ul>
         </div>
       </section>
+      <footer>
+        <p>Design by Adi Purdila. Code by Adi Purdia and George Martsoukos.</p>
+      </footer>
     </main>
     <script type="module" src="/main.js"></script>
   </body>

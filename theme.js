@@ -14,7 +14,6 @@ dateRef.innerHTML = new Date(currentDate).toDateString("en-us", {
   dataStyle: "long",
 });
 
-
 function checkCurrentTheme() {
   switch (currentTheme) {
     case "dark":
@@ -104,5 +103,15 @@ themeIconRef.addEventListener("click", () => {
     currentTheme = "dark";
     iconCheck();
     checkCurrentTheme();
+  }
+});
+
+darkQuery.addEventListener("change", (evt) => {
+  if (!("theme" in localStorage)) {
+    if (evt.matches) {
+      docElement.classList.add("dark");
+    } else {
+      docElement.classList.remove("dark");
+    }
   }
 });
