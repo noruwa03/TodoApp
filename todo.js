@@ -1,7 +1,7 @@
 const todoForm = document.querySelector("#todoForm");
 const todoInput = document.querySelector("#todoInput");
 const todoRef = document.querySelector("#todo");
-const todoRefWrapper = document.querySelector(".todo-wrapper");
+
 
 const completed = document.querySelector(".completed");
 const remaining = document.querySelector(".remaining");
@@ -12,7 +12,7 @@ let todo = localStorage.getItem("todo")
   : [];
 
 if (localStorage.getItem("todo")) {
-  todo.reverse().map((data) => {
+  todo.map((data) => {
     addTask(data);
   });
 }

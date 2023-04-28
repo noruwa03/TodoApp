@@ -291,7 +291,7 @@ footer p {
   }
   footer {
     width: 80%;
-    margin: 0 auto;
+    margin: 1rem auto;
     display: grid;
     place-content: center;
   }
@@ -318,12 +318,12 @@ footer p {
   header .wrapper form input {
     width: 100%;
     border-radius: 0.5rem;
-    font-size: 0.89em;
+    font-size: 0.99em;
   }
   header .wrapper form button {
     margin-top: 0.8rem;
     width: 100%;
-    font-size: 0.78em;
+    font-size: 0.8em;
     border-radius: 0.5rem;
   }
   section {
@@ -370,7 +370,7 @@ footer p {
   }
   footer {
     width: 90%;
-    margin: 0 auto;
+    margin: 1rem auto;
     display: grid;
     place-content: center;
   }
