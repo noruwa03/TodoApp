@@ -23,10 +23,10 @@ pnpm install
 
 ```bash
 # Light mode
-![Light mode](assets/images/home.PNG)
+![Light mode](https://github.com/noruwa03/TodoApp/blob/master/assets/images/home.PNG?raw=true)
 
 
 # Dark mode
-![Dark mode](assets/images/home_dark.PNG)
+![Dark mode](https://github.com/noruwa03/TodoApp/blob/master/assets/images/home_dark.PNG?raw=true)
 
 ```
