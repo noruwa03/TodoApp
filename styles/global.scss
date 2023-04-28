@@ -23,7 +23,7 @@
   height: 2rem;
 
   .stroke-sun {
-    stroke: #FCE570;
+    stroke: #fce570;
   }
   .fill-moon {
     fill: #fff;
@@ -43,6 +43,7 @@ body {
     .wrapper {
       .date {
         color: #fff;
+        
       }
     }
   }
@@ -51,9 +52,6 @@ body {
     .todo-wrapper {
       .stats {
         div {
-   
-
-
           span {
             background-color: rgb(7, 60, 107);
           }
@@ -61,30 +59,25 @@ body {
       }
 
       ul {
-
         li {
           background-color: #1f2430;
 
           &.complete {
-            color: #1c1820;
+            color: #77bbd4;
             background-color: #1c2731;
 
             span {
-              color: #1c1820;
+              color: #77bbd4;
             }
           }
 
           div {
             input[type="checkbox"] {
-              border: 0.14rem solid #0d1117;
-
-              &:checked {
-                border: rgb(186, 224, 250);
-                background-color: #1c1820;
-              }
+              // border: 0.14rem solid #77bbd4;
+              border: 0.14rem solid #c0c0c0;
             }
             span {
-             color: #c0c0c0;
+              color: #c0c0c0;
 
               &:hover {
                 background-color: #181818;
@@ -95,6 +88,12 @@ body {
                   background-color: #181818;
                 }
               }
+            }
+          }
+
+          button {
+            svg path {
+              fill: #ff6969;
             }
           }
         }
@@ -119,7 +118,7 @@ header {
 
     .date {
       margin-bottom: 1rem;
-      font-size: 1.1em;
+      font-size: 1.3em;
       font-weight: bold;
       color: #fff;
     }
@@ -145,7 +144,7 @@ header {
         padding: 0.7rem 1rem;
         width: 21%;
         border: none;
-        font-size: 0.93em;
+        font-size: 0.9em;
         font-weight: bold;
         border-radius: 0 0.5rem 0.5rem 0;
         background-color: #ff8c42;
@@ -297,6 +296,34 @@ section {
   }
 }
 
+@media screen and (max-width: 990px) {
+  header {
+    padding: 2rem 0;
+
+    .wrapper {
+      width: 80%;
+      margin: 0 auto;
+
+      form {
+        input {
+          width: 74%;
+        }
+        button {
+          width: 25%;
+        }
+      }
+    }
+  }
+
+  section {
+    padding: 1.5rem 0;
+    .todo-wrapper {
+      width: 80%;
+      margin: 0 auto;
+    }
+  }
+}
+
 @media screen and (max-width: 760px) {
   header {
     padding: 2rem 0;
@@ -327,7 +354,7 @@ section {
         button {
           margin-top: 0.8rem;
           width: 100%;
-font-size: 0.85em;
+          font-size: 0.7em;
           border-radius: 0.5rem;
         }
       }
@@ -340,20 +367,21 @@ font-size: 0.85em;
       width: 90%;
       margin: 0 auto;
 
-
       @include flexItem(flex-start, space-between);
-      flex-direction: column;
+      flex-direction: column-reverse;
 
       .stats {
-        @include flexItem(flex-start, space-between);
-        flex-direction: column;
-        width: 60%;
+        @include flexItem(flex-start, space-around);
+        flex-direction: row;
+        flex-wrap: wrap;
+        width: 100%;
         margin: 0 auto 1.3rem auto;
 
         div {
-          width: 100%;
+          width: 47%;
           padding: 0.2rem 0 0.2rem 0.7rem;
           position: relative;
+          font-size: 0.8em;
 
           span {
             display: grid;
@@ -373,7 +401,6 @@ font-size: 0.85em;
 
       ul {
         width: 100%;
- 
       }
     }
   }

@@ -21,7 +21,7 @@
   height: 2rem;
 }
 .icon .stroke-sun {
-  stroke: #FCE570;
+  stroke: #fce570;
 }
 .icon .fill-moon {
   fill: #fff;
@@ -47,18 +47,14 @@ body {
   background-color: #1f2430;
 }
 .dark section .todo-wrapper ul li.complete {
-  color: #1c1820;
+  color: #77bbd4;
   background-color: #1c2731;
 }
 .dark section .todo-wrapper ul li.complete span {
-  color: #1c1820;
+  color: #77bbd4;
 }
 .dark section .todo-wrapper ul li div input[type=checkbox] {
-  border: 0.14rem solid #0d1117;
-}
-.dark section .todo-wrapper ul li div input[type=checkbox]:checked {
-  border: rgb(186, 224, 250);
-  background-color: #1c1820;
+  border: 0.14rem solid #c0c0c0;
 }
 .dark section .todo-wrapper ul li div span {
   color: #c0c0c0;
@@ -68,6 +64,9 @@ body {
 }
 .dark section .todo-wrapper ul li div span:focus[contenteditable] {
   background-color: #181818;
+}
+.dark section .todo-wrapper ul li button svg path {
+  fill: #ff6969;
 }
 
 header {
@@ -85,7 +84,7 @@ header .wrapper .theme {
 }
 header .wrapper .date {
   margin-bottom: 1rem;
-  font-size: 1.1em;
+  font-size: 1.3em;
   font-weight: bold;
   color: #fff;
 }
@@ -114,7 +113,7 @@ header .wrapper form button {
   padding: 0.7rem 1rem;
   width: 21%;
   border: none;
-  font-size: 0.93em;
+  font-size: 0.9em;
   font-weight: bold;
   border-radius: 0 0.5rem 0.5rem 0;
   background-color: #ff8c42;
@@ -252,6 +251,28 @@ section .todo-wrapper ul li button:hover svg path {
   transition: all 0.3s ease;
 }
 
+@media screen and (max-width: 990px) {
+  header {
+    padding: 2rem 0;
+  }
+  header .wrapper {
+    width: 80%;
+    margin: 0 auto;
+  }
+  header .wrapper form input {
+    width: 74%;
+  }
+  header .wrapper form button {
+    width: 25%;
+  }
+  section {
+    padding: 1.5rem 0;
+  }
+  section .todo-wrapper {
+    width: 80%;
+    margin: 0 auto;
+  }
+}
 @media screen and (max-width: 760px) {
   header {
     padding: 2rem 0;
@@ -279,7 +300,7 @@ section .todo-wrapper ul li button:hover svg path {
   header .wrapper form button {
     margin-top: 0.8rem;
     width: 100%;
-    font-size: 0.85em;
+    font-size: 0.7em;
     border-radius: 0.5rem;
   }
   section {
@@ -291,20 +312,22 @@ section .todo-wrapper ul li button:hover svg path {
     display: flex;
     align-items: flex-start;
     justify-content: space-between;
-    flex-direction: column;
+    flex-direction: column-reverse;
   }
   section .todo-wrapper .stats {
     display: flex;
     align-items: flex-start;
-    justify-content: space-between;
-    flex-direction: column;
-    width: 60%;
+    justify-content: space-around;
+    flex-direction: row;
+    flex-wrap: wrap;
+    width: 100%;
     margin: 0 auto 1.3rem auto;
   }
   section .todo-wrapper .stats div {
-    width: 100%;
+    width: 47%;
     padding: 0.2rem 0 0.2rem 0.7rem;
     position: relative;
+    font-size: 0.8em;
   }
   section .todo-wrapper .stats div span {
     display: grid;
